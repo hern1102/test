@@ -1,0 +1,17 @@
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter what percentage you have achieved in the class.");
+        int grade = in.nextInt();
+       
+       //Enter the highest number range first, and then the next highest number range and so on.. It translates well when trying to
+       //work a tax bracket.
+       
+       if (grade >= 90 && grade <= 100)
+            System.out.println("You have an A in the class! Congrats!");
+        else if (grade >= 80)
+            System.out.println("You have a B in the class.");
+        else if (grade >= 70)
+            System.out.println("You have a C in the class.");
+        else if (grade >= 60)
+            System.out.println("You have a D in the class.");
+        else
+            System.out.println("You have achieved an F, you need to see a tutor!");
