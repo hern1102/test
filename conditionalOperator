@@ -1,0 +1,9 @@
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of miles driven.");
+        int milesDriven = in.nextInt();
+        NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        double amountOwed; 
+        
+        amountOwed = (milesDriven <= 100 ? milesDriven*0.25 : ((100*0.25)+((milesDriven - 100) * 0.15)));
+       
+        System.out.println("You are owed " + fmt.format(amountOwed));
