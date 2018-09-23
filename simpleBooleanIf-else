@@ -1,0 +1,13 @@
+        System.out.println("Enter any two numbers to compare their values!"); 
+        int x, y;
+        x = in.nextInt();
+        y = in.nextInt();
+        
+        boolean truth = x > y; 
+        if (!truth)
+            System.out.println(y + " is the greater number.");
+        else 
+            System.out.println(x + " is the greater number.");
+    }
+    
+}
