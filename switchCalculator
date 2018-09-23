@@ -1,0 +1,27 @@
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter 2 values that you would like to either add, subtract, multiply, or divide.");
+        double num1 = in.nextDouble();
+        double num2 = in.nextDouble();
+        
+        System.out.println("Now enter the number associated with the operation of your choice.");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        int operation = in.nextInt();
+        
+        switch (operation){
+            case 1:
+                System.out.println("The sum of the values inputted is " + (num1 + num2) + ".");
+                break;
+            case 2:
+                System.out.println("The difference of the values inputted is " + (num1 - num2) + ".");
+                break;
+            case 3:
+                System.out.println("The product of the values inputted is " + (num1 * num2) + ".");
+                break;
+            case 4:
+                System.out.println("The qoutient of the values inputted is " + (num1/num2) +".");
+                break;
+            default:
+                System.out.println("Invalid Operation");
