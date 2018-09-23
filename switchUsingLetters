@@ -1,0 +1,19 @@
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter a character, and I will tell you if it is a vowel or not.");
+        String str = in.nextLine();
+        char vowel = str.charAt(0);
+        
+        switch(Character.toUpperCase(vowel)){
+            case 'A': 
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':    
+                System.out.println("You have entered a vowel!");
+                break;
+            default:
+                System.out.println("Your input was not a vowel.");
+                
+               
+               //Notice that you used .toUpperCase in order to change the user input to uppercase so that the switch can run correctly. 
+                //The allows the user to not worry about inputting text uppercase for the program to run smoothly.
