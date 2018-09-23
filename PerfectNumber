@@ -1,0 +1,26 @@
+     Scanner in = new Scanner(System.in);
+     //Ask for the user to enter input
+     System.out.println("Enter a number to check if it is a perfect number.");
+     //place that number into the varible "number"
+     int number = in.nextInt();
+     //Sum is going to help you 
+     int sum = 0;
+     /*"i" is going to be equal to 1, "i" is going to test itself against the number inputted. 
+     if the condition is true, is will continue to add i to sum as long is the condition is true.
+     if there is a remainder, then it will no longer add to sum, the loop however will continue to run as long as the condition is true.
+     Once the loop is done, it will check how much you added to the sum based off the remainder if statement, if it is equal to the number. 
+     BINGO
+     */
+     for (int i = 1; i < number ; i++){
+         //number % i is making sure that there is no remainder.
+         if (number % i == 0){
+             sum += i;
+         }
+     }
+         //This is going to be the next statement. Not to be confused with being apart of the loop.
+         if (sum == number){
+             System.out.println("The number you entered is a perfect number.");
+         }
+         else{
+             System.out.println("The number you entered is not a perfect number.");
+         }
