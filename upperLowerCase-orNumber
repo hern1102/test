@@ -1,0 +1,11 @@
+       Scanner in = new Scanner(System.in);
+        System.out.println("Enter anything on you keyboard and I will tell you what you have entered!");
+        String str = in.nextLine();
+        char ch = str.charAt(0);
+        
+        if (ch >= '0' && ch <= '9')
+            System.out.println("You have entered a digit!");
+        else if (ch >= 'a'&& ch <= 'z')
+            System.out.println("You have entered a lower case letter!");
+        else if (ch >= 'A' && ch <= 'Z') 
+            System.out.println("You have entered a upper case letter!");
