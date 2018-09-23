@@ -1,0 +1,22 @@
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter the amount of inches you would like to convert.");
+        double inches = in.nextDouble();
+        
+        System.out.println("Now enter the number associated with the conversion you would like to make.");
+        System.out.println("1. millimeters");
+        System.out.println("2. centimeters");
+        System.out.println("3. meters");
+        int conversion = in.nextInt();
+        
+        switch (conversion){
+            case 1:
+                System.out.println("The conversion to millimeters is " + (inches * 25.4));
+                break;
+            case 2:
+                System.out.println("The conversion to centimeters is " + (inches * 2.54));
+                break;
+            case 3:
+                System.out.println("The conversion to meters is " + (inches * 0.0254));
+                break;
+            default:
+                System.out.println("Invalid Operation");
