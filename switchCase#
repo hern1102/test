@@ -1,0 +1,26 @@
+        Scanner in = new Scanner(System.in);
+        NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        System.out.println("How many widgets do you want to purchase?");
+        int widgets = in.nextInt();
+        
+        switch (widgets){
+            case 1:
+                System.out.println("The total cost of your widget is " + fmt.format(5.38));
+                break;
+            case 2:
+                System.out.println("The total cost of your widgets is " + fmt.format(2 * 4.89));
+                break;
+            case 3:
+                System.out.println("The total cost of your widgets is " + fmt.format(3 * 4.66));
+                break;
+            case 4:
+                System.out.println("The total cost of your widgets is " + fmt.format(4 * 4.23));
+                break;
+            default:
+                System.out.println("Sorry, you are only allowed to buy up to 4 widgets.");
+                
+                
+                
+                /*This switch is pretty simple. You ask them how many widgets they are buying, take that number, assign it 
+                to a case. The switch looks at that number and redirects you to the case number, and runs that block of code.
+                You can only buy up to 4 widgets in this switch, or else it will let you know. simple switch.
