@@ -1,0 +1,45 @@
+Description: This program asks you if you want to play a game. If you say yes,
+then the program will ask you to guess a number between 1 and 10. Once you guess
+correctly, the program will ask you if you want to play again. If you say no,
+the program will say, see you next time.
+ */
+package journal.pkg3c;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class Journal3C {
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random rnd = new Random();
+        int guess;
+        System.out.println("Would you like to play a game (y/n)?");
+        String str = in.nextLine();
+                
+        while (str.equals("y")){
+                
+                int count = 1;
+                int num = rnd.nextInt(10)+1;
+                
+                System.out.println("Guess a number between 1 and 10.");
+                guess = in.nextInt(); 
+              
+                while (guess != num){
+                    System.out.println("Guess a number between 1 and 10.");
+                    guess = in.nextInt();
+                    count++;
+                }
+                
+              System.out.println("It took " + count + " guesses to guess correctly!");
+              System.out.println("Would you like to play again (y/n)?");
+              str = in.next();
+               
+        }
+            
+            System.out.println("See you next time!");
+        
+    }
+    
+}
