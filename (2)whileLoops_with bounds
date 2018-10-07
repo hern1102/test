@@ -1,0 +1,42 @@
+Description: This program allows a user to guess of a number between 1 and 10, if they guess something
+outside of those bounds, the program will remind them to guess of a number between 1 and 10. It will ask 
+over and over again until the user correctly guesses the number.
+ */
+package assignment.pkg8;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Assignment8 {
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random rnd = new Random();
+        int rndnum = rnd.nextInt(10)+1;
+        System.out.println("I'm thinking of a number between 1 and 10 \nCan you guess it?");
+        int guess = in.nextInt();
+        int points = 10;
+        int counter = 1;
+            
+        
+            while(guess != rndnum){
+                
+                while (guess > 10 || guess < 1){
+                System.out.println("Must be a number between 1 and 10.\nTry again.");
+                guess = in.nextInt();
+                counter++;
+                points-=2;
+                }
+                
+                System.out.println("Sorry, wrong guess \nTry again.");
+                guess = in.nextInt();
+                counter++;
+                points-=2;
+                }
+                
+            System.out.println("It took you " + counter + " guesses to guess: " + rndnum);
+            System.out.println("You have " + points + " points.");
+
+    }
+    
+}
