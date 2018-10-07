@@ -1,0 +1,74 @@
+Description: Assignment 9 is a calculator using a switch within a while loop. You also parse through the text 
+in order to pull the function and value you want to perform a mathmatical function on.
+ */
+package assignment.pkg9;
+import java.util.Scanner;
+
+public class Assignment9 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        
+        System.out.println("This calculator requires you to enter a function and a number");
+        System.out.println("The functions are as follows:");
+        System.out.println("S - sine");
+        System.out.println("C - cosine");
+        System.out.println("T - tangent");
+        System.out.println("R - square root");
+        System.out.println("N - natural log");
+        System.out.println("X - eXit the program\n");
+        
+        System.out.println("Please enter a function and a value.");
+        String input = in.nextLine();
+        char operation = input.charAt(0);
+        String sValue = input.substring(2);
+        double dValue =Double.parseDouble(sValue);
+        
+        while (Character.toUpperCase(operation) != 'X'){
+            
+        
+        switch (Character.toUpperCase(operation)){ 
+            
+            case 'S':
+                double S = Math.sin(dValue);
+                System.out.println("The Sin of your number is " + S);
+                break; 
+             
+            case 'C':
+                double C = Math.cos(dValue);
+                System.out.println("The Cosine of your number is " + C);
+                break;  
+                
+            case 'T':
+                double T = Math.tan(dValue);
+                System.out.println("The Tangent of your number is " + T);
+                break;
+                
+            case 'R':
+                double R = Math.sqrt(dValue);
+                System.out.println("The Square Root of your number is " + R);
+                break;
+                
+            case 'N':
+                double N = Math.log(dValue);
+                System.out.println("The Natural Log of your number is " + N);
+                break;
+                
+            case 'X':
+                break;
+        }
+        
+        System.out.println("Please enter a function and a value.");
+            input = in.nextLine();
+            operation = input.charAt(0);
+            sValue = input.substring(2);
+            dValue =Double.parseDouble(sValue);
+        
+        }
+        
+         System.out.println("Thanks for using the calculator"); 
+            
+        }
+        
+}
