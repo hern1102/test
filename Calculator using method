@@ -1,0 +1,95 @@
+/* 
+Description: The code below is a calculator that uses a method outside of main 
+in order to do a calculation of radians to degrees. Then in the switch you call
+the method and assign it the variable of radians, it does the calculation, 
+then produces the number desired. 
+ */
+package assignment.pkg10;
+import java.util.Scanner;
+
+
+public class Assignment10 {
+    
+    public double rad2deg(double radians){
+        double degrees = radians * 180/Math.PI;
+        return degrees; 
+    }
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Assignment10 c = new Assignment10();
+
+        
+        System.out.println("This calculator requires you to enter a function and a number");
+        System.out.println("The functions are as follows:");
+        System.out.println("S - sine");
+        System.out.println("C - cosine");
+        System.out.println("T - tangent");
+        System.out.println("R - square root");
+        System.out.println("N - natural log");
+        System.out.println("X - eXit the program\n");
+        
+        System.out.println("Please enter a function then a value.");
+        String input = in.nextLine();
+        char operation = input.charAt(0);
+        String sValue = input.substring(2);
+        double dValue = Double.parseDouble(sValue);
+        double radians;
+        
+        while (Character.toUpperCase(operation) != 'X'){
+            
+        
+        switch (Character.toUpperCase(operation)){ 
+            
+            case 'S':
+                double S = Math.sin(dValue);
+                System.out.println("The Sine of your number is " + S);
+                radians = S;
+                System.out.println("The Sine of your number in degrees is " + c.rad2deg(radians));  
+                break; 
+             
+            case 'C':
+                double C = Math.cos(dValue);
+                System.out.println("The Cosine of your number is " + C);
+                radians = C;
+                System.out.println("The Cosine of your number in degrees is " + c.rad2deg(radians));
+                break;  
+                
+            case 'T':
+                double T = Math.tan(dValue);
+                System.out.println("The Tangent of your number is " + T);
+                radians = T;
+                System.out.println("The Tangent of your number in degrees is " + c.rad2deg(radians));
+                break;
+                
+            case 'R':
+                double R = Math.sqrt(dValue);
+                System.out.println("The Square Root of your number is " + R);
+                radians = R;
+                System.out.println("The Square Root of your number in degrees is " + c.rad2deg(radians));
+                break;
+                
+            case 'N':
+                double N = Math.log(dValue);
+                System.out.println("The Natural Log of your number is " + N);
+                radians = N;
+                System.out.println("The Natural Log of your number in degrees is " + c.rad2deg(radians));
+                break;
+                
+            case 'X':
+                break;
+        }
+        
+        System.out.println("Please enter a function then a value.");
+            input = in.nextLine();
+            operation = input.charAt(0);
+            sValue = input.substring(2);
+            dValue =Double.parseDouble(sValue);
+        
+        }
+        
+         System.out.println("Thanks for using the calculator"); 
+            
+        }
+    }
