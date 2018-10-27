@@ -1,0 +1,29 @@
+Description: While loop with Math.abs, looking for the absolute value against a boolean.
+ */
+package bruh;
+import java.util.Scanner;
+
+
+public class Bruh {
+
+  
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        
+        System.out.println("Enter a number.");
+        int firstNumber = in.nextInt();
+        System.out.println("Enter a number.");
+        int secondNumber = in.nextInt();
+        
+        while ((Math.abs(firstNumber - secondNumber)) < 11){
+            
+            firstNumber = secondNumber;
+            System.out.println("Enter a number.");
+            secondNumber = in.nextInt();
+            
+        }
+        System.out.println("The difference between the last two numbers entered is greater than 10.");
+    }
+    
+}
