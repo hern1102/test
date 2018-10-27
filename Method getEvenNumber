@@ -1,0 +1,35 @@
+/*
+Description: The program below continues to ask the user for an even number until
+the user inputs an even number. Once the user inputs an even number, the program 
+will tell the user that they inputted an even number and will repeat the number inputted.
+ */
+package journal4b;
+import java.util.Scanner;
+
+public class Journal4B {
+    
+    Scanner in = new Scanner(System.in);
+    
+    public int getEvenValue(){
+        
+        System.out.println("Please enter an even number");
+        int numEntered = in.nextInt();
+        
+        while(numEntered % 2 != 0){ 
+            System.out.println("Please enter an even number");
+            numEntered = in.nextInt();
+        }
+        
+        return numEntered; 
+        
+    }
+
+    public static void main(String[] args) {
+        
+        Journal4B c = new Journal4B();
+        int evenNum = c.getEvenValue();
+        System.out.println("You have entered an even number! That number is " + evenNum);
+        
+    }
+    
+}
