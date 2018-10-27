@@ -1,0 +1,32 @@
+/*
+Description: Exam 2 covers loops.
+ */
+package exam.pkg2;
+import java.util.Scanner;
+
+
+public class Exam2 {
+
+   
+    public static void main(String[] args) {
+       Scanner in = new Scanner(System.in);
+        int num, sum =0;
+
+        
+        do
+        {
+            
+            System.out.println("Please enter a number.");
+            num = in.nextInt();
+            
+            sum = sum + num;
+            
+            System.out.println("The cumulative is " + sum);
+            
+        } while (num != 0);
+       
+            System.out.println("Thanks for the numbers!");    
+        
+    } 
+        
+    }
