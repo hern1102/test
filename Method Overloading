@@ -1,0 +1,37 @@
+/*
+ Method Overloading example
+ */
+package practice;
+import java.util.Scanner;
+
+
+public class Practice {
+    
+    public double sumDouble(double a, double b){
+        return a + b;
+    }
+    
+    public double sumDouble(double a, double b, double c){
+        this.sumDouble(a, b);
+        double num;
+        return num = sumDouble(a, b) + c; 
+ 
+    }
+    
+  
+    public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        Practice c = new Practice();
+        
+        double one = 1;
+        double two = 2;
+        double three = 3;
+        
+        double sum2 = c.sumDouble(one, two);
+        double sum3 = c.sumDouble(one, two, three);
+        
+        System.out.println(sum3);
+    }
+    
+}
