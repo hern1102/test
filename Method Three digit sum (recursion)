@@ -1,0 +1,38 @@
+/*
+Description: This program uses recursion in order to take a three digit number and find out the sum of all of the numbers digit by digit.
+ */
+package assignment.pkg12;
+import java.util.Scanner;
+
+public class Assignment12 {
+
+    public int sumNumber(int a){
+        int sum = 0;
+        
+        while (a > 0){
+            sum = sum + a % 10;
+            a = a / 10;
+        }
+        return sum;
+    }
+    
+    public int sumNumber (int a, int b){
+        return this.sumNumber(a) + this.sumNumber(b);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Assignment12 c = new Assignment12();
+        
+        
+        System.out.println("Enter two three digit numbers.");
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+        
+        int finalSum = c.sumNumber(num1, num2);
+        
+        System.out.println("The sum of the individual numbers is " + finalSum);
+        
+    }
+    
+}
