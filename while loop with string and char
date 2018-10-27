@@ -1,0 +1,27 @@
+/*
+Description: Enter a string of text, and stop when you hit a period. Using a while loop
+ */
+package bruh2;
+import java.util.Scanner;
+
+public class Bruh2 {
+
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int i = 0;
+        System.out.println("Enter some text.");
+        String str = in.nextLine();
+        char strChar = str.charAt(i);
+        int counter = 0;
+
+                while (strChar != '.'){
+                    
+                    i++;
+                    counter++;
+                    strChar = str.charAt(i);
+                }
+            System.out.println(counter);
+    }
+    
+}
